@@ -22,12 +22,6 @@ jobs:
           python-version: 3.x
           cache: 'pip'
 
-      - name: Cache MkDocs
-        uses: actions/cache@v3
-        with:
-          key: mkdocs-${{ hashFiles('requirements.txt') }}
-          path: .cache
-
       - name: Install dependencies
         run: pip install -r requirements.txt
 
