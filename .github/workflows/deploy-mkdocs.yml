@@ -24,7 +24,7 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
-          key: ${{ github.ref }}
+          key: mkdocs-${{ hashFiles('requirements.txt') }}
           path: .cache
 
       - name: Install dependencies
